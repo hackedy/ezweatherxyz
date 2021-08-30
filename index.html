@@ -2,7 +2,7 @@
   <head>
     <title>EZ Weather</title>
     <script>
-      document.onload = function () {
+      document.onload = function (e) {
         var weatherspan = document.getElementById("weather");
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "https://api.weather.gov/gridpoints/BUF/36,47/forecast", true);
