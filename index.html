@@ -5,14 +5,14 @@
       function getWeather(url) {
         var weatherRequest = new XMLHttpRequest();
         weatherRequest.open("GET", url, false);
-        xmlHttp.send(null);
-        return xmlHttp.responseText;
+        weatherRequest.send(null);
+        return weatherRequest.responseText;
       }
       document.onload = function () {
-        weatherspan = document.getElementById("weather");
+        var weatherspan = document.getElementById("weather");
         var json = getWeather("https://api.weather.gov/gridpoints/BUF/36,47/forecast");
-        weatherspan.innerHTML = json;
-      }
+        weatherspan.innerHTML = "hot";
+      };
     </script>
   </head>
   <body>
