@@ -10,7 +10,6 @@
       }
       document.onload = function () {
         weatherspan = document.getElementById("weather");
-        // weather from https://api.weather.gov/gridpoints/BUF/36,47/forecast
         var json = getWeather("https://api.weather.gov/gridpoints/BUF/36,47/forecast");
         weatherspan.innerHTML = json;
       }
