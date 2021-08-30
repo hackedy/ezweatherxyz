@@ -1,8 +1,20 @@
 <html>
   <head>
     <title>EZ Weather</title>
+    <script>
+      function getWeather() {
+        var weatherRequest = new XMLHttpRequest();
+        weatherRequest.open("GET", theUrl, false);
+        xmlHttp.send(null);
+        return xmlHttp.responseText;
+      }
+      document.onload = function () {
+        weatherspan = document.getElementById("weather");
+        weatherspan.innerHTML = "hot";
+      }
+    </script>
   </head>
   <body>
-    <p>The weather is hot.</p>
+    <p>The weather is <span id="weather">not loaded yet...</span>.</p>
   </body>
 </html>
