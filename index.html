@@ -2,16 +2,23 @@
   <head>
     <title>EZ Weather</title>
     <script>
-      function getWeather(url) {
-        var weatherRequest = new XMLHttpRequest();
-        weatherRequest.open("GET", url, false);
-        weatherRequest.send(null);
-        return weatherRequest.responseText;
-      }
       document.onload = function () {
         var weatherspan = document.getElementById("weather");
-        var json = getWeather("https://api.weather.gov/gridpoints/BUF/36,47/forecast");
-        weatherspan.innerHTML = "hot";
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.weather.gov/gridpoints/BUF/36,47/forecast", true);
+        xhr.onload = function (e) {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              weatherspan.innerHTML = (xhr.responseText);
+            } else {
+              console.error(xhr.statusText);
+            }
+          }
+        };
+        xhr.onerror = function (e) {
+          console.error(xhr.statusText);  
+        };
+        xhr.send(null); 
       };
     </script>
   </head>
