@@ -1,7 +1,8 @@
-h1 {
+h1 { font-size=50;
+  text-align:center;
   background-color: #00FBFF;
 }
-body { 
+body { text-align:center;
 background-color:#06C5FE; 
     font-family: 'Courier New', monospace;
 }
