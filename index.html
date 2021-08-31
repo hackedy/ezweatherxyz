@@ -8,11 +8,14 @@
           var weatherspan = document.getElementById("weather");
           // modify this
           weatherspan.innerHTML = temperature;
-        if (temperature >= 75 ) {
+        if (temperature >= 70 ) {
           weatherspan.innerHTML= "<p>Hot</p>" 
            document.body.style.backgroundColor = "#CE1818";
          document.getElementsByTagName("h1")[0].style.backgroundColor= "#FA2E2E";
-      }
+      } 
+        if else (temperature <=70){
+          weatherspan.innerHTML= "<p>Chilly</p>"
+        }
       }
       function go(e) {
         var xhr = new XMLHttpRequest();
