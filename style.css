@@ -19,7 +19,10 @@ span {
   from { 
     font-size:50px;
   }
-  to {
+  66% {
   font-size:100px;
+  }
+    to { 
+      font-size:50px;
   }        
 }
