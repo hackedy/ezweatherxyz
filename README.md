@@ -1,1 +1,1 @@
-# ezweatherxyz
+https://hackedy.github.io/ezweatherxyz/
