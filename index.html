@@ -31,7 +31,8 @@
             if (xhr.status === 200) {
               var response = JSON.parse(xhr.responseText);
               var temp = response.properties.temperature.value;
-              updatePage(degCToDegF(temp))
+              updatePage(60)
+              //(degCToDegF(temp))
             } else {
               console.error(xhr.statusText);
             }
