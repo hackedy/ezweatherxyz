@@ -4,6 +4,10 @@
     <title>EZ Weather</title>
   
     <script>
+      function updatePage(temperature) {
+          // modify this
+          weatherspan.innerHTML = temperature;
+      }
       function go(e) {
         var weatherspan = document.getElementById("weather");
         var xhr = new XMLHttpRequest();
@@ -13,7 +17,7 @@
             if (xhr.status === 200) {
               var response = JSON.parse(xhr.responseText);
               var temp = response.properties.periods[0].temperature;
-              weatherspan.innerHTML = temp;
+              updatePage(temp)
             } else {
               console.error(xhr.statusText);
             }
