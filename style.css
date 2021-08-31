@@ -12,4 +12,14 @@ body {
 span { 
   font-size:100px;
   font-weight:bold;
+  animation-name:bounce;
+  animation-iteration-count:infinite;
+}
+@keyframes bounce {
+  from { 
+    font-size:50px;
+  }
+  to {
+  font-size:100px;
+  }        
 }
