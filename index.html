@@ -4,6 +4,10 @@
     <title>EZ Weather</title>
   
     <script>
+      function degCToDegF(degC) {
+        degF = degC * 9.0 / 5.0 + 32;
+        return degF;
+      }
       function updatePage(temperature) {
           var weatherspan = document.getElementById("weather");
           // modify this
@@ -19,13 +23,13 @@
       }
       function go(e) {
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api.weather.gov/gridpoints/BUF/36,47/forecast", true);
+        xhr.open("GET", "https://api.weather.gov/stations/KBUF/observations/latest", true);
         xhr.onload = function (e) {
           if (xhr.readyState === 4) {
             if (xhr.status === 200) {
               var response = JSON.parse(xhr.responseText);
-              var temp = response.properties.periods[0].temperature;
-              updatePage(temp)
+              var temp = response.properties.temperature.value;
+              updatePage(degCToDegF(temp))
             } else {
               console.error(xhr.statusText);
             }
