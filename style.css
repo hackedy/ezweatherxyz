@@ -1,11 +1,15 @@
-h1 { font-size:50px;
+h1 { 
+  font-size:50px;
   text-align:center;
   background-color: #00FBFF;
 }
-body { text-align:center;
-background-color:#06C5FE; 
-    font-family: 'Courier New', monospace;
+body {
+  font-size:50px;
+  text-align:center;
+  background-color:#06C5FE; 
+  font-family: 'Courier New', monospace;
 }
-span { font-size:50px;
+span { 
+  font-size:100px;
   font-weight:bold;
 }
