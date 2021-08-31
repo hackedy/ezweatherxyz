@@ -16,8 +16,11 @@
           weatherspan.innerHTML= "<p>Hot</p>" 
            document.body.style.backgroundColor = "#CE1818";
          document.getElementsByTagName("h1")[0].style.backgroundColor= "#FA2E2E";
-      } else if (temperature <=70){
-          weatherspan.innerHTML= "<p>Chilly</p>"
+      } else if (temperature <=55){
+          weatherspan.innerHTML= "<p>Cold</p>"
+        }
+        else { 
+          weatherspan.innerHTML="<p>Chilly</p>"
         }
       }
       function go(e) {
