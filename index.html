@@ -5,6 +5,7 @@
   
     <script>
       function updatePage(temperature) {
+          var weatherspan = document.getElementById("weather");
           // modify this
           weatherspan.innerHTML = temperature;
         if (temperature >= 75 ) {
@@ -12,7 +13,6 @@
       }
       }
       function go(e) {
-        var weatherspan = document.getElementById("weather");
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "https://api.weather.gov/gridpoints/BUF/36,47/forecast", true);
         xhr.onload = function (e) {
